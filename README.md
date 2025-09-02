@@ -1,0 +1,1 @@
+This is the repo where i have practiced the Object Related Mapping(ORM) in the django and interact with the database model including foreign key in the model as well as ManyToMany relationship between two models
