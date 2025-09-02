@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% comment %} this is for to get all the resturant and their related ratings and sales {% endcomment %}
+{% comment %} {% for resturant in resturants %}
+<p>{{resturant}} </p>
+<ul>
+    {% for ratings in resturant.ratings.all %}
+        <li>{{ratings.rating}} </li>   
+    {% endfor %}
+</ul>
+<ul>
+    {% for sales in resturant.sales.all %}
+        <li>{{sales.income}} </li>   
+    {% endfor %}
+</ul>
+{% endfor %} {% endcomment %}
+
+
+{% for rating in ratings %}
+
+<ul>
+    {{ rating.resturant.name }} - {{rating.rating}}
+    {% comment %} {% for sales in rating.resturant.sales.all %}
+    <p> {{sales.income}} </p>
+    {% endfor %} {% endcomment %}
+</ul>
+{% endfor %}
+{% endblock  %}
